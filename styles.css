@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&family=Poppins:wght@100;200;300;400&display=swap');
+:root{
+    --purple:#814096;
+    --pink:#F83292;
+    --gradient:linear-gradient(90deg, var(--purple), var(--pink));
+
+}
+html{
+    font-size: 10px;
+}
+*::selection{
+    background: var(--pink);
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-weight:normal;
+
+}
+body{
+    background:#f9f9f9;
+}
+section{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 9rem;
+    padding-bottom: 2rem;
+}
+header{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 2rem 9%;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1) ;
+    z-index: 1000;
+}
+header .logo{
+    font-size: 2.2rem;
+    color: var(--purple);
+    font-weight: bold;
+}
+header .logo span{
+    color: var(--pink);
+}
+header nav a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--purple);
+    font-weight: bold;
+}
+header nav a:hover{
+    color: var(--pink);
+}
+header input{
+    visibility: hidden;
+
+}
+header label{
+    font-size: 2.8rem;
+    color: #814096;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.home{
+    background-image: url("/images/home-bg-img.png");
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.home .content h1{
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: bolder;
+}
+.home .content h1 span{
+    color: #F83292;
+}
+.home .content p{
+    font-size: 2rem;
+    padding-top: 2%;
+    padding-right: 6rem;
+    text-transform: capitalize;
+    color:#666;
+    word-spacing: 0.5rem;
+}
+.home .image{
+}
+.home .image img{
+    width:40vw;
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+@keyframes float{
+    0%,100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-3.5rem);
+    }
+}
+
+.btn{
+    display: inline-block;
+    border: transparent;
+    font-size: 2.3rem;
+    background: var(--gradient);
+    border-radius: 25px;
+    color: white;
+    padding: 0.5rem 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    margin-top: 1.5rem;
+    transition: all 0.3s linear;
+}
+.btn:hover{
+    transform: scale(1.1);
+
+}
+
+.heading{
+    text-align: center;
+    font-size:4rem;
+    text-transform: uppercase;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+}
+.appfeatures .cardbox{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+.appfeatures .card{
+    text-align: center;
+    padding:2rem 3rem;
+    width: 26%;
+    margin: 0 2rem;
+    background: white;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1) ;
+
+}
+.appfeatures .card img{
+    height: 15rem;
+
+}
+.appfeatures .card h1{
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: #333333;
+    margin-top: 2rem;
+    font-weight: bolder;
+
+}
+.appfeatures .card p{
+    font-size: 1.4rem;
+    color: #666666;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.appfeatures .btn{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+}
+.about{
+    background-color: white;
+    background-image: url("images/about-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+.about .content{
+    display: flex;
+    justify-content: space-between;
+}
+.about .content-box{
+    padding: 0 2%;
+    margin-top: 5%;
+}
+.about .content img{
+    width: 40vw;
+}
+.about .content-box h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+
+}
+.about .content-box p{
+    color: #666666;
+    font-size: 1.7rem;
+}
+.about .content-box .btn {
+    padding:0.5rem 3rem;
+    font-size: 2.2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+.about .content-box i{
+    color: white;
+    margin-right: 0.5rem;
+
+}
+#btn2{
+    margin-left:2.5rem ;
+}
+
+.subscribe{
+    background-image: url("images/subscribe-bg.png");
+    min-height: 0;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 25%;
+}
+.subscribe h1 {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.subscribe p{
+    font-size: 1.7rem;
+    margin: 1.5rem 0;
+}
+.subscribe form{
+    width: 95%;
+    border: 2px solid white;
+    border-radius: 15px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+}
+#email{
+    background: transparent;
+    color: white;
+    border: none;
+}
+#sub-btn{
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 0 2rem;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+}
+#sub-btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/*media queries come here*/
+
+    @media (max-width: 1295px) {
+        .home .content h1 {
+            font-size: 4rem;
+            font-weight: bolder;
+        }
+
+        .home .content p {
+            font-size: 1.5rem;
+        }
+        .home img{
+            width: 80vw;
+        }
+        .appfeatures .cardbox .card img{
+            height: 12rem;
+        }
+        .about .content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .about .content .content-box{
+            text-align: left;
+        }
+        .about{
+            background: white;
+
+        }
+        .about .content img{
+            width: 60vw;
+         }
+        .subscribe{
+            text-align: left;
+            padding: 2rem 5%;
+        }
+        #sub-btn{
+        }
+
+
+        .subscribe form{
+            width: 95%;
+            border: 2px solid white;
+            border-radius: 15px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.4rem 1rem;
+            flex-wrap: wrap;
+        }
+        #email{
+            text-wrap: normal;
+            width: 60%;
+        }
+        #sub-btn{
+            padding: 0 0.5rem;
+        }
+
+
+    }
+    @media (max-width: 934px) {
+        .home .content h1 {
+            font-size: 4rem;
+        }
+
+        .appfeatures .cardbox .card img {
+            height: 8rem;
+        }
+                .subscribe h1 {
+            font-size: 2rem;
+
+}
+.subscribe p{
+    font-size: 1.5rem;
+}
+    }
+
+@media(max-width: 808px) {
+    header a {
+        display: block;
+        padding: 0.6rem;
+    }
+
+    header nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.15s linear;
+        transform: scaleX(0);
+        transform-origin: right;
+        height: 100vh;
+        background: white;
+
+    }
+
+    header input:checked ~ #navbar {
+        transform: scaleX(1);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header label {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header input:checked ~ label::before {
+        content: '\f00d';
+    }
+
+    .home {
+        background-image: url("/images/home-bg-img.png");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .home .content h1 {
+        font-size: 3.5rem;
+
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    .home .image img {
+        width: 80vw;
+    }
+    .appfeatures .cardbox{
+        flex-direction: column;
+        align-items: center;
+
+}
+        .appfeatures .cardbox .card{
+            margin: 0;
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+        .appfeatures .cardbox .card img{
+            height: 10rem;
+        }
+        .appfeatures #features{
+            font-size: 3rem;
+        }
+        .heading{
+            font-size: 3rem;
+        }
+                .about{
+            background-image: none;
+        }
+        .about .content{
+            flex-direction: column;
+        }
+        .about .content img{
+            width: 80vw;
+        }
+        .about .content-box h1{
+            font-size: 3rem;
+        }
+        .about .content-box{
+            padding: 0;
+        }
+        section{
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .about .content-box .btn {
+            padding:1rem 2rem;
+            font-size: 1.7rem;
+            align-items: center;
+            margin-top: 1rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .about .content-box p{
+            font-size: 1.5rem;
+        }
+        #btn2{
+            margin-left:0 ;
+        }
+}
+
